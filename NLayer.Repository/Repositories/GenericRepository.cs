@@ -27,6 +27,8 @@ namespace NLayer.Repository.Repositories
 
         public async Task AddRangeAsync(IEnumerable<T> entities)
         {
+            //efcore burada memory'e ekleme yapar.
+            //bu yüzden bir şey dönmemize gerek yok.
             await _dbSet.AddRangeAsync(entities);
         }
 
@@ -35,7 +37,7 @@ namespace NLayer.Repository.Repositories
             return await _dbSet.AnyAsync(expression);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetAll()
         {
             return _dbSet.AsNoTracking().AsQueryable();
             //asnotracking = efcore çekmiş olduğu dataları memory'e almasın

@@ -75,5 +75,6 @@ namespace NLayer.Service.Services
             return _repository.Where(expression);
             //repository'deki expression'u dönüyoruz.
         }
+        
     }
 }

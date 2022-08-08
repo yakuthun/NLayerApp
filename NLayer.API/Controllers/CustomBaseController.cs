@@ -4,8 +4,8 @@ using NLayer.Core.DTOs;
 
 namespace NLayer.API.Controllers
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
+    [Route("api/[controller]")]
+    [ApiController]
     public class CustomBaseController : ControllerBase
     {
         [NonAction] //endpoint olmadığını belirtiyoruz. swagger endpoint olarak algılamayacak.

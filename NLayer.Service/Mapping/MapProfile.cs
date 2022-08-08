@@ -18,6 +18,8 @@ namespace NLayer.Service.Mapping
             CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
             CreateMap<ProductUpdateDto, Product>();//productdto gelir ise product'a dönüştürüyor
             //reverse'e tersine ihtiyacımız yok.
+            CreateMap<Product, ProductWithCategoryDto>().ReverseMap();//product'ı productwithCategoryDto'a dönüştürdüm.
+            CreateMap<Category, CategoryWithProductsDto>().ReverseMap();
         }
     }
 }
